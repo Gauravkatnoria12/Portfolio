@@ -29,7 +29,7 @@ export default function Marquee() {
     items.map((item, idx) => (
       <span 
         key={isAlt ? `alt-${idx}` : idx} 
-        className="marquee-item-span flex items-center gap-12 text-base md:text-5xl font-medium font-sixcaps uppercase tracking-widest select-none transition-all duration-300 hover:scale-[1.05] cursor-default text-neutral-800 dark:text-white"
+        className="marquee-item-span flex items-center gap-12 text-3xl md:text-5xl font-medium font-sixcaps uppercase tracking-widest select-none transition-all duration-300 hover:scale-[1.05] cursor-default text-neutral-800 dark:text-white"
       >
         <span>{item}</span>
         <Bot className="marquee-item-bot w-6 h-6 text-red-400 dark:text-yellow-100 select-none flex-shrink-0 transition-all duration-300" strokeWidth={2} />
