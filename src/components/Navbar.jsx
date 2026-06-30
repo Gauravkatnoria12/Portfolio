@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = ({ darkMode, toggleDarkMode, mobileMenuOpen, setMobileMenuOpen }) => {
   const [scrolled, setScrolled] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
-  const brandTexts = ["Gaurav", "AI Engineer"];
+  const brandTexts = ["Gaurav K", "AI Engineer"];
 
   useEffect(() => {
     const handleScroll = () => {

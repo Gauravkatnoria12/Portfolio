@@ -11,7 +11,7 @@ const Footer = () => {
         {/* Left: Copyright */}
         <div className="order-3 md:order-1 flex flex-col items-center md:items-start text-center md:text-left gap-1">
           <p className="text-lg text-gray-500 dark:text-gray-400">
-            © {currentYear} Gaurav. All rights reserved.
+            © {currentYear} Gaurav Katnoria.<br />All rights reserved.
           </p>
           <p className="text-[11px] text-gray-400 dark:text-gray-500">
             Developed with passion.

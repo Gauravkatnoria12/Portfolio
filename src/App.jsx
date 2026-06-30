@@ -54,8 +54,8 @@ function App() {
           <PathAnimation />
           <Hero />
           <About />
-          <Marquee />
           <Projects />
+          <Marquee />
           <div className="max-w-5xl mx-auto pt-24 pb-0 px-6 md:px-12 lg:px-24">
             <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">Technical Expertise</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed text-base md:text-lg mb-10">
@@ -78,7 +78,7 @@ function App() {
           </div>
 
           <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
-            <div className="px-6 py-5 md:px-8 rounded-sm overflow-hidden *dark:bg-neutral-800/50 shadow-lg border border-neutral-200 dark:border-neutral-800">
+            <div className="px-6 py-5 md:px-8 rounded-sm overflow-hidden dark:bg-neutral-900 shadow-md border border-neutral-200 dark:border-neutral-800">
               <div className="grid md:grid-cols-5 gap-8 items-center">
                 <div className="md:col-span-3">
                   <AnimatePresence mode="wait">
