@@ -11,7 +11,7 @@ export default function DevOps() {
     <section className="max-w-5xl mx-auto py-10">
       <div>
         <h3 className="text-neutral-800 dark:text-white text-xl font-medium tracking-tight mb-1">Dev Ops & Deployment</h3>
-        <p className="text-base md:text-lg text-gray-400 dark:text-gray-400 mb-10">Development and deployment tools I'm familiar with.</p>
+        <p className="text-base md:text-lg text-gray-400 dark:text-gray-400 mb-10">Development and deployment tools I'm familiar <br/>with.</p>
 
         <div className="max-w-5xl mx-auto">
           <div className="grid w-full max-w-[24rem] aspect-square grid-cols-2 grid-rows-4 gap-3 ml-0">
