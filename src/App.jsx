@@ -141,7 +141,7 @@ function App() {
           </div>
 
           <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
-            <div className="px-6 py-5 md:px-8 rounded-sm overflow-hidden dark:bg-zinc-900 shadow-md border border-neutral-200 dark:border-neutral-800">
+            <div className="px-6 py-5 md:px-8 rounded-sm overflow-hidden dark:bg-slate-950 dark:bg-gradient-to-r from-gray-900 via-slate-800 to-zinc-900 dark:animate-gradient-x shadow-sm border border-neutral-200 dark:border-neutral-800">
               <div className="grid md:grid-cols-5 gap-8 items-center">
                 <div className="md:col-span-3 relative">
                   {sections.map((section) => {

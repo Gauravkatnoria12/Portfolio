@@ -8,7 +8,6 @@ const Text = () => {
         initial={{ opacity: 0, y: 60, filter: 'blur(8px)' }}
         whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
         viewport={{ once: true, margin: "-100px" }}
-        whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="font-sixcaps text-[14rem] sm:text-[18rem] md:text-[24rem] lg:text-[28rem] inline-block bg-gradient-to-b from-neutral-950 to-neutral-400 dark:from-neutral-50 dark:to-neutral-800 bg-clip-text text-transparent tracking-wider leading-none select-none cursor-default"
       >
