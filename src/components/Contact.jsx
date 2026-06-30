@@ -87,7 +87,7 @@ const Contact = () => {
           <img 
             src="/shiro.png" 
             alt="Shiro" 
-            className="absolute bottom-full right-6 w-20 h-auto pointer-events-none translate-y-[22px] z-10"
+            className="absolute bottom-full right-6 w-20 h-auto pointer-events-none translate-y-[20px] z-10"
           />
           
           <form 
