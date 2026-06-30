@@ -28,26 +28,26 @@ export default function AIML() {
           {/* Right side split into 4 boxes */}
           <div className="grid grid-cols-2 grid-rows-2 gap-3 row-span-2">
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={pandasImg} alt="Pandas" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={jupyterImg} alt="Jupyter Notebook" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
               <img src={numpyImg} alt="NumPy" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={scikitImg} alt="Scikit-Learn" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={pandasImg} alt="Pandas" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={anacondaImg} alt="Anaconda" className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-md select-none pointer-events-none" />
+              <img src={matplotlibImg} alt="Matplotlib" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
           </div>
 
           {/* Left-bottom split into 4 boxes */}
           <div className="grid grid-cols-2 grid-rows-2 gap-3 row-span-2">
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={matplotlibImg} alt="Matplotlib" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={seabornImg} alt="Seaborn" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={seabornImg} alt="Seaborn" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={anacondaImg} alt="Anaconda" className="w-12 h-12 md:w-14 md:h-14 object-contain rounded-md select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
               <img src={pycharmImg} alt="PyCharm" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
@@ -59,7 +59,7 @@ export default function AIML() {
 
           {/* Tall Right */}
           <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 row-span-2 rounded-sm flex items-center justify-center p-2 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-            <img src={jupyterImg} alt="Jupyter Notebook" className="w-20 h-20 md:w-24 md:h-24 object-contain select-none pointer-events-none" />
+            <img src={scikitImg} alt="Scikit-Learn" className="w-20 h-20 md:w-24 md:h-24 object-contain select-none pointer-events-none" />
           </div>
 
         </div>

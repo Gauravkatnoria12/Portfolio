@@ -28,16 +28,16 @@ export default function Backend() {
           {/* Right side split into 4 boxes */}
           <div className="grid grid-cols-2 grid-rows-2 gap-3 row-span-2">
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={postgresqlImg} alt="PostgreSQL" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={pythonImg} alt="Python" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={mongodbImg} alt="MongoDB" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={sqlalchemyImg} alt="SQLAlchemy" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
               <img src={mysqlImg} alt="MySQL" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
             <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 rounded-sm flex items-center justify-center p-1.5 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-              <img src={sqlalchemyImg} alt="SQLAlchemy" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
+              <img src={mongodbImg} alt="MongoDB" className="w-12 h-12 md:w-14 md:h-14 object-contain select-none pointer-events-none" />
             </div>
           </div>
 
@@ -57,9 +57,9 @@ export default function Backend() {
             </div>
           </div>
 
-          {/* Tall Right: Python */}
+          {/* Tall Right: PostgreSQL */}
           <div className="bg-white border-[2.5px] border-white shadow-lg dark:shadow-sm dark:shadow-neutral-500 row-span-2 rounded-sm flex items-center justify-center p-2 dark:bg-white dark:border-transparent transition-all duration-300 hover:scale-[1.03] hover:shadow-md dark:hover:shadow-md dark:hover:shadow-neutral-600 cursor-default">
-            <img src={pythonImg} alt="Python" className="w-20 h-20 md:w-24 md:h-24 object-contain select-none pointer-events-none" />
+            <img src={postgresqlImg} alt="PostgreSQL" className="w-20 h-20 md:w-24 md:h-24 object-contain select-none pointer-events-none" />
           </div>
 
         </div>

@@ -9,6 +9,7 @@ import AIML from './components/AIML';
 import Frontend from './components/Frontend';
 import Backend from './components/Backend';
 import DevOps from './components/DevOps';
+import Tools from './components/Tools';
 import PathAnimation from './components/PathAnimation';
 import Marquee from './components/Marquee';
 import Experience from './components/Experience';
@@ -20,7 +21,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('AI & ML');
-  const sections = ['AI & ML', 'Frontend', 'Backend', 'DevOps'];
+  const sections = ['AI & ML', 'Frontend', 'Backend', 'DevOps', 'Tools'];
 
   // Toggle dark mode
   const toggleDarkMode = () => {
@@ -124,6 +125,17 @@ function App() {
                         transition={{ duration: 0.35 }}
                       >
                         <DevOps />
+                      </motion.div>
+                    )}
+                    {activeSection === 'Tools' && (
+                      <motion.div
+                        key="Tools"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.35 }}
+                      >
+                        <Tools />
                       </motion.div>
                     )}
                   </AnimatePresence>
