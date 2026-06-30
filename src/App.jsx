@@ -54,11 +54,13 @@ function App() {
         <main className="relative">
           <PathAnimation />
           <Hero />
-          <About />
+          <About darkMode={darkMode} />
           <Projects />
           <Marquee />
           <div id="skills" className="max-w-5xl mx-auto pt-24 pb-0 px-6 md:px-12 lg:px-24">
-            <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">Technical Expertise</h2>
+            <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">
+              ✦ &nbsp; Technical Expertise
+            </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed text-base md:text-lg mb-10">
               My technical expertise combines full-stack software development with a growing focus on Artificial Intelligence. I have completed NumPy, Pandas, and Matplotlib and am currently learning Scikit-learn to strengthen my Machine Learning foundation. Alongside building modern web applications, I'm preparing to develop intelligent systems powered by Machine Learning, Large Language Models (LLMs), and Agentic AI.
             </p>
