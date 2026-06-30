@@ -39,18 +39,24 @@ const Navbar = ({ darkMode, toggleDarkMode, mobileMenuOpen, setMobileMenuOpen })
     }`}>
       <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="relative h-6 flex items-center overflow-hidden min-w-[120px]">
+          <a href="#home" className="relative h-9 flex items-center overflow-hidden min-w-[120px]">
             <AnimatePresence mode="wait">
-              <motion.span
+              <motion.div
                 key={textIndex}
                 initial={{ y: 10, opacity: 0, filter: 'blur(4px)' }}
                 animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
                 exit={{ y: -10, opacity: 0, filter: 'blur(4px)' }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="text-xl font-semibold text-gray-900 dark:text-white whitespace-nowrap uppercase tracking-wider"
+                className="flex items-center"
               >
-                {brandTexts[textIndex]}
-              </motion.span>
+                {textIndex === 0 ? (
+                  <img src="/GK.png" alt="GK Logo" className="h-9 w-auto object-contain dark:invert" />
+                ) : (
+                  <span className="text-lg font-semibold text-gray-900 dark:text-white whitespace-nowrap uppercase tracking-wider">
+                    AI Engineer
+                  </span>
+                )}
+              </motion.div>
             </AnimatePresence>
           </a>
 

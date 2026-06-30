@@ -21,6 +21,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('Tools');
+  const [loading, setLoading] = useState(true);
   const sections = ['Tools', 'AI & ML', 'Frontend', 'Backend', 'DevOps'];
 
   // Toggle dark mode
@@ -39,8 +40,67 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [mobileMenuOpen]);
 
+  // Loading animation timeout
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Prevent scroll during loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [loading]);
+
   return (
     <div className={darkMode ? 'dark' : ''}>
+      <AnimatePresence>
+        {loading && (
+          <motion.div
+            key="preloader"
+            initial={{ opacity: 1 }}
+            exit={{ 
+              opacity: 0,
+              transition: { duration: 0.6, ease: "easeInOut" }
+            }}
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white"
+          >
+            <div className="flex flex-col items-center gap-4">
+              <motion.img 
+                src="/GK.png" 
+                alt="GK Logo" 
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain select-none pointer-events-none"
+                animate={{ 
+                  scale: [0.96, 1.04, 0.96],
+                  opacity: [0.6, 1, 0.6]
+                }}
+                transition={{ 
+                  repeat: Infinity, 
+                  duration: 1.6, 
+                  ease: "easeInOut" 
+                }}
+              />
+              <motion.span 
+                initial={{ opacity: 0.4 }}
+                animate={{ opacity: [0.4, 1, 0.4] }}
+                transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+                className="text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.3em] text-neutral-400 dark:text-neutral-500 font-semibold mt-2"
+              >
+                Gaurav Katnoria
+              </motion.span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="min-h-screen bg-neutral-50 text-gray-900 transition-colors duration-300 dark:bg-neutral-950 dark:text-gray-100 font-sans antialiased overflow-x-hidden selection:bg-neutral-200 dark:selection:bg-neutral-800">
         {/* Navbar */}
         <Navbar 
