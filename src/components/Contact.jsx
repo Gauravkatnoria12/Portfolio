@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Mail, MapPin, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,13 @@ const Contact = () => {
       <div className="grid md:grid-cols-5 gap-12 md:gap-20">
         
         {/* Left Column: Info & Details */}
-        <div className="md:col-span-2 space-y-10">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="md:col-span-2 space-y-10"
+        >
           <div>
             <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-5 tracking-tight">
               ✦ &nbsp; Get in Touch
@@ -67,10 +74,16 @@ const Contact = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right Column: Interactive Form */}
-        <div className="md:col-span-3 relative">
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="md:col-span-3 relative"
+        >
           <img 
             src="/shiro.png" 
             alt="Shiro" 
@@ -132,7 +145,7 @@ const Contact = () => {
               )}
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

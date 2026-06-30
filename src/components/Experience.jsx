@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Experience = () => {
   const experiences = [
@@ -30,11 +31,23 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-normal text-gray-900 dark:text-white mb-12"
+      >
         ✦ &nbsp; Education & Experience
-      </h2>
+      </motion.h2>
 
-      <div className="space-y-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7 }}
+        className="space-y-8"
+      >
         {experiences.map((exp, index) => (
           <div key={index} className="border-l-2 border-gray-200 dark:border-gray-800 pl-6">
             <h3 className="text-xl font-medium text-gray-900 dark:text-white">
@@ -51,7 +64,7 @@ const Experience = () => {
             </p>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   const projects = [
@@ -35,11 +36,23 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">
+      <motion.h2 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-normal text-gray-900 dark:text-white mb-12"
+      >
         ✦ &nbsp; Projects
-      </h2>
+      </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="grid md:grid-cols-2 gap-8"
+      >
         {projects.map((project, index) => (
           <div
             key={index}
@@ -83,7 +96,7 @@ const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
