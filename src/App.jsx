@@ -212,7 +212,7 @@ function App() {
                   <img 
                     src="/skills.png" 
                     alt="Skills Illustration" 
-                    className="max-w-full h-auto max-h-[26rem] md:max-h-[30rem] object-contain select-none pointer-events-none -translate-y-16 md:-translate-y-24" 
+                    className="max-w-full h-auto max-h-[26rem] md:max-h-[30rem] object-contain select-none pointer-events-none translate-y-4 md:-translate-y-24" 
                   />
                 </div>
               </div>
