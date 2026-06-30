@@ -59,7 +59,7 @@ const Hero = () => {
           variants={reveal}
           className="mb-8 max-w-md text-xl leading-8 text-gray-600 dark:text-gray-400 md:text-2xl"
         >
-          Computer Science student focused on Agentic AI, LLMs, Gen AI and modern software development.
+          Computer Science student focused on Machine Learning, Agentic AI , LLMs and Gen AI.
         </motion.p>
 
         <motion.div

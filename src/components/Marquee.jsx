@@ -49,7 +49,7 @@ export default function Marquee() {
               className="marquee-item-alt flex items-center gap-12 text-sm md:text-base font-medium uppercase tracking-widest dark:text-neutral-700 text-white"
             >
               <span>{item}</span>
-              <span className="dark:text-neutral-700 text-3xl text-white select-none"><Bot size={24} strokeWidth={1}/></span>
+              <span className="dark:text-black text-3xl text-white select-none"><Bot size={24} strokeWidth={1}/></span>
             </span>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function Marquee() {
         .marquee-content-alt {
           flex: 0 0 auto;
           width: max-content;
-          animation: marquee-scroll-alt 35s linear infinite;
+          animation: marquee-scroll-alt 40s linear infinite;
         }
         .marquee-item-alt {
           flex: 0 0 auto;

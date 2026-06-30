@@ -57,7 +57,7 @@ function App() {
           <About />
           <Projects />
           <Marquee />
-          <div className="max-w-5xl mx-auto pt-24 pb-0 px-6 md:px-12 lg:px-24">
+          <div id="skills" className="max-w-5xl mx-auto pt-24 pb-0 px-6 md:px-12 lg:px-24">
             <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">Technical Expertise</h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed text-base md:text-lg mb-10">
               My technical expertise combines full-stack software development with a growing focus on Artificial Intelligence. I have completed NumPy, Pandas, and Matplotlib and am currently learning Scikit-learn to strengthen my Machine Learning foundation. Alongside building modern web applications, I'm preparing to develop intelligent systems powered by Machine Learning, Large Language Models (LLMs), and Agentic AI.
@@ -81,64 +81,35 @@ function App() {
           <div className="max-w-5xl mx-auto px-6 md:px-12 lg:px-24">
             <div className="px-6 py-5 md:px-8 rounded-sm overflow-hidden dark:bg-neutral-900 shadow-md border border-neutral-200 dark:border-neutral-800">
               <div className="grid md:grid-cols-5 gap-8 items-center">
-                <div className="md:col-span-3">
-                  <AnimatePresence mode="wait">
-                    {activeSection === 'AI & ML' && (
+                <div className="md:col-span-3 relative">
+                  {sections.map((section) => {
+                    const isVisible = activeSection === section;
+                    return (
                       <motion.div
-                        key="AI & ML"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.35 }}
+                        key={section}
+                        initial={{ opacity: 0, y: 15 }}
+                        animate={{ 
+                          opacity: isVisible ? 1 : 0, 
+                          y: isVisible ? 0 : 15,
+                        }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        style={{
+                          pointerEvents: isVisible ? 'auto' : 'none',
+                          position: isVisible ? 'relative' : 'absolute',
+                          top: 0,
+                          left: 0,
+                          right: 0,
+                          zIndex: isVisible ? 10 : 0
+                        }}
                       >
-                        <AIML />
+                        {section === 'AI & ML' && <AIML />}
+                        {section === 'Frontend' && <Frontend />}
+                        {section === 'Backend' && <Backend />}
+                        {section === 'DevOps' && <DevOps />}
+                        {section === 'Tools' && <Tools />}
                       </motion.div>
-                    )}
-                    {activeSection === 'Frontend' && (
-                      <motion.div
-                        key="Frontend"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.35 }}
-                      >
-                        <Frontend />
-                      </motion.div>
-                    )}
-                    {activeSection === 'Backend' && (
-                      <motion.div
-                        key="Backend"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.35 }}
-                      >
-                        <Backend />
-                      </motion.div>
-                    )}
-                    {activeSection === 'DevOps' && (
-                      <motion.div
-                        key="DevOps"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.35 }}
-                      >
-                        <DevOps />
-                      </motion.div>
-                    )}
-                    {activeSection === 'Tools' && (
-                      <motion.div
-                        key="Tools"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.35 }}
-                      >
-                        <Tools />
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                    );
+                  })}
                   <div className="flex items-center gap-4 mt-6 ml-0 w-fit">
                     <button
                       type="button"

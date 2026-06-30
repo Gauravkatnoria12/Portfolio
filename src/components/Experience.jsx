@@ -11,7 +11,7 @@ const Experience = () => {
     {
       Grade: 'Bachelor of Technology (B.Tech) – Computer Science Engineering (Artificial Intelligence & Machine Learning)',
       percentage: 'Currently Pursuing',
-      year: '',
+      year: '2nd Year Student',
       description: 'Rayat Bahra Professional University, Hoshiarpur.'
     },
     {
@@ -29,7 +29,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
+    <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
       <h2 className="text-3xl font-normal text-gray-900 dark:text-white mb-12">
         Education & Experience
       </h2>
