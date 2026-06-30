@@ -1,5 +1,6 @@
 import React from 'react';
 import { GitHubCalendar } from 'react-github-calendar';
+import { ExternalLink } from 'lucide-react';
 
 const About = ({ darkMode }) => {
   return (
@@ -17,8 +18,9 @@ const About = ({ darkMode }) => {
       </div>
 
       <h2 className="text-3xl font-normal text-gray-900 dark:text-white mt-24 mb-12">
-        ✦ &nbsp; Github
+        ✦ &nbsp; GitHub
       </h2>
+
       <div className="w-full overflow-hidden py-4 github-calendar-container">
         <GitHubCalendar 
           username="Gauravkatnoria12" 
@@ -32,6 +34,15 @@ const About = ({ darkMode }) => {
             height: auto;
           }
         `}} />
+        
+        <a 
+          href="https://github.com/Gauravkatnoria12"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center mt-14 px-6 py-4 bg-neutral-900 hover:bg-black dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-950 rounded-2xl font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 w-fit"
+        >
+          Visit my GitHub Profile <ExternalLink className="w-4 h-4 ml-2" />
+        </a>
       </div>
     </section>
   );

@@ -116,7 +116,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={status === 'sending' || status === 'success'}
-              className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-neutral-900 hover:bg-black dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-950 rounded-2xl font-medium text-sm transition-all duration-300 disabled:opacity-50 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-neutral-900 hover:bg-black dark:bg-white dark:hover:bg-neutral-100 text-white dark:text-neutral-950 rounded-2xl font-medium text-md transition-all duration-300 disabled:opacity-50 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
             >
               {status === 'sending' ? (
                 <span>Sending...</span>
