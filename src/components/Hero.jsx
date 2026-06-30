@@ -111,6 +111,9 @@ const Hero = () => {
         transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative flex-1 w-full max-w-[260px] aspect-[3/4] mt-8 md:-mt-28 cursor-pointer"
       >
+        {/* Minimal single-color gradient backdrop */}
+        <div className="absolute -inset-4 bg-gradient-to-tr from-transparent dark:from-slate-400/30 to-transparent rounded-[2.5rem] blur-2xl -z-10 pointer-events-none" />
+
         <div className="w-full h-full rounded-2xl overflow-hidden bg-gray-100 dark:bg-white/5">
           <img 
             src="/shinchan.png" 
