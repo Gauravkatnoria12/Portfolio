@@ -10,15 +10,37 @@ const Contact = () => {
   });
   const [status, setStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('sending');
     
-    setTimeout(() => {
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    
+    try {
+      const response = await fetch(`${API_URL}/contact/Add`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          Message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit message to the backend API');
+      }
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus(null), 3000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+      setTimeout(() => setStatus(null), 5000);
+    }
   };
 
   const handleChange = (e) => {
@@ -125,6 +147,12 @@ const Contact = () => {
                 className="w-full px-4 py-3.5 bg-neutral-50 dark:bg-neutral-950 border border-neutral-200/50 dark:border-neutral-800 rounded-2xl text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-neutral-500 focus:outline-none focus:border-white dark:focus:border-white focus:ring-4 focus:ring-neutral-100 dark:focus:ring-white/20 transition-all duration-300 text-sm resize-none"
               />
             </div>
+
+            {status === 'error' && (
+              <p className="text-red-500 text-sm text-center font-medium">
+                Failed to send message. Please try again.
+              </p>
+            )}
 
             <button
               type="submit"
