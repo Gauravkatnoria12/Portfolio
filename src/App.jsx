@@ -18,7 +18,13 @@ import Text from './components/Text';
 import Footer from './components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme !== null) {
+      return savedTheme === 'dark';
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('Tools');
   const [loading, setLoading] = useState(true);
@@ -28,6 +34,11 @@ function App() {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
+
+  // Sync dark mode to localStorage
+  useEffect(() => {
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
   // Close mobile menu on scroll
   useEffect(() => {
@@ -71,13 +82,13 @@ function App() {
               opacity: 0,
               transition: { duration: 0.6, ease: "easeInOut" }
             }}
-            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white"
+            className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white dark:bg-[#171717]"
           >
             <div className="flex flex-col items-center gap-4">
               <motion.img 
                 src="/GK.png" 
                 alt="GK Logo" 
-                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain select-none pointer-events-none"
+                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain select-none pointer-events-none dark:invert"
                 animate={{ 
                   scale: [0.96, 1.04, 0.96],
                   opacity: [0.6, 1, 0.6]
